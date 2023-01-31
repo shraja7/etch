@@ -9,13 +9,16 @@
   </head>
   <body> 
     <h1>Etch-a-Sketch</h1>
-    <div class="gridCount">
-      <input type="number" id="gridSize" />
+    <form id="gridCount">
+      <input id="gridSize" />
       <button id="createGrid">Create Grid</button>
-    </div>
+    </form>
     
 
-    <div id="grid"></div>
+    <div id="gridContainer">
+<div class="grid-item"></div>
+
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
