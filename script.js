@@ -17,11 +17,30 @@ function createGrid(gridCount) {
   let gridArea = gridCount * gridCount;
   grid.style.gridTemplateColumns = `repeat(${gridCount}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${gridCount}, 1fr)`;
+ 
   for (let i = 0; i < gridArea; i++) {
     let gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
     grid.appendChild(gridItem);
   }
+
+  const hoveredItems = [];
+
+grid.addEventListener("mouseover", function(e) {
+  if (e.target.classList.contains("grid-item")) {
+    const index = hoveredItems.indexOf(e.target);
+    if (index === -1) {
+      hoveredItems.push(e.target);
+      e.target.classList.add("hover-orange");
+    }
+  }
+});
+
 }
 
-createGrid(16);
+
+// JavaScript code to add the hover-orange class to hovered elements and keep track of their state
+
+
+
+createGrid(10);

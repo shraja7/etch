@@ -3,23 +3,16 @@
  
     
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    gap: 1px;
-    width: 256px;
-    height: 256px;
+  width: 500px;
+    height: 500px;
+    
   }
   .grid-item{
     border: 1px solid black;
-    background-color: #f1f1f1;
+    }
 
 
-
-  }
-
-  .grid-item:hover{
-    background-color: #f1f1f1;
-    border: 1px solid black;
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  .hover-orange {
     background-color: orange;
   }
+  
