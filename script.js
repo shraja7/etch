@@ -2,6 +2,7 @@ const form = document.querySelector("#gridCount");
 
 const input = form.querySelector("input");
 const button = form.querySelector("button");
+const clearButton = document.querySelector("#clearButton");
 let gridCount;
 
 form.addEventListener("submit", (event) => {
@@ -36,7 +37,19 @@ grid.addEventListener("mouseover", function(e) {
   }
 });
 
+//clear the grid when clicked
+clearButton.addEventListener("click", () => {
+hoveredItems.forEach((item) => {
+  item.classList.remove("hover-orange");
+
+});
+hovereledItems.length = 0;
+
+})
+
+
 }
+
 
 
 // JavaScript code to add the hover-orange class to hovered elements and keep track of their state
