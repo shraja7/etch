@@ -9,10 +9,13 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   gridCount = input.value;
   console.log(`The grid count is: ${gridCount}`);
+  createGrid(gridCount);
 });
 
 
 //creating the grid
+
+
 function createGrid(gridCount) {
   let grid = document.querySelector("#gridContainer");
   let gridArea = gridCount * gridCount;
@@ -44,8 +47,15 @@ hoveredItems.forEach((item) => {
 
 });
 hovereledItems.length = 0;
-
+gridCount = 0;
+//clear all styles from the grid
+const gridItems = document.querySelectorAll(".grid-item");
+  gridItems.forEach(function(item) {
+    item.removeAttribute("style");
+  });
 })
+
+console.log('gridCount', gridCount);
 
 
 }
@@ -54,6 +64,3 @@ hovereledItems.length = 0;
 
 // JavaScript code to add the hover-orange class to hovered elements and keep track of their state
 
-
-
-createGrid(10);
